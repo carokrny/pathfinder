@@ -33,7 +33,7 @@ function Grid() {
   for(let i = 0; i<size.rows; i++) {
     let temp: any[] = [];
     for(let j = 0; j<size.cols; j++) {
-      temp.push(false);
+      temp.push(0);
     }
     data.push(temp);
   }
@@ -42,8 +42,23 @@ function Grid() {
   // return jsx with grid
   return (
     <div className="Grid">
-      <h2> Rows: {size.rows} </h2>
-      <h2> Cols: {size.cols} </h2>
+      {/* <h2> Rows: {size.rows} </h2>
+      <h2> Cols: {size.cols} </h2> */}
+      <table> 
+        <tbody>
+        {data.map((currentRow, r) => {
+          return (
+            <tr id={`row${r}`} key={`row${r}`}>
+              {currentRow.map((item, c) => {
+                return (
+                  <td className="block empty" id={`${r}-${c}`} key={`${r}-${c}`}></td>
+                )
+            })}
+            </tr>
+          )
+        })}
+        </tbody>
+      </table>
     </div>
   );
 }
