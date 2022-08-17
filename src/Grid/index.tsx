@@ -6,7 +6,8 @@ const blockSize = 25;
 
 function Grid() {
   // use state hook to enable grid sizing based on window size
-  const [size, setSize] = useState(getSize());
+  // initially set to zero since useState runs before components mount
+  const [size, setSize] = useState({cols: 0, rows: 0});
 
   // use effect hook to resize grid when window resizes
   useEffect(() => {
@@ -14,9 +15,15 @@ function Grid() {
       setSize(getSize());
     }
 
+    // calling handleResize in useEffect to get around initial load error
+    // since useEffect is called after all components mount. 
+    handleResize();
+
+    // add event listener
     window.addEventListener('resize', handleResize);
 
     return () => {
+      // remove event listener
       window.removeEventListener('resize', handleResize);
     }
   }, []);
