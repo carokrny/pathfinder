@@ -1,13 +1,17 @@
-.Grid {
-    height: 100%;
+#grid {
+    height: auto;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-table {
+#grid table{
+    height: 100%;
+    max-width: 100%;
     border-spacing: 0;
+    border-collapse: collapse;
+    table-layout: fixed;
     border: 1px solid black;
 }
 
@@ -16,7 +20,11 @@ table {
     max-height: 25px;
     width: 25px;
     max-width: 25px;
-    font-size: 6px;
+    font-size: 5px;
+    line-height: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
 }
 
 .empty {

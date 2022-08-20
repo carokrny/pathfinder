@@ -41,9 +41,7 @@ function Grid() {
 
   // return jsx with grid
   return (
-    <div className="Grid">
-      {/* <h2> Rows: {size.rows} </h2>
-      <h2> Cols: {size.cols} </h2> */}
+    <div id="grid">
       <table> 
         <tbody>
         {data.map((currentRow, r) => {
@@ -51,7 +49,7 @@ function Grid() {
             <tr id={`row${r}`} key={`row${r}`}>
               {currentRow.map((item, c) => {
                 return (
-                  <td className="block empty" id={`${r}-${c}`} key={`${r}-${c}`}></td>
+                  <td className="block empty" id={`${r}-${c}`} key={`${r}-${c}`}>{/*`${r}-${c}`*/}</td>
                 )
             })}
             </tr>
@@ -73,8 +71,8 @@ function getSize(): {cols: number, rows: number} {
     return {cols: 0, rows: 0}
   }
 
-  const cols = Math.floor(app.clientWidth / blockSize);
-  const rows = Math.floor(app.clientHeight / blockSize);
+  const cols = Math.floor(app.clientWidth * .8 / blockSize); 
+  const rows = Math.floor(app.clientHeight * .8 / blockSize);
 
   return { rows, cols };
 }
