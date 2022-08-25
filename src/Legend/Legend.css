@@ -1,0 +1,15 @@
+.legend {
+    align-self: flex-start;
+    width: 100vw;
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: lightslategray;
+    color: darkslategray;
+}
+
+h1 {
+   font-size: 1.2rem; 
+}
