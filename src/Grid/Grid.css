@@ -1,4 +1,4 @@
-#grid {
+.grid {
     height: auto;
     width: 100%;
     display: flex;
@@ -6,7 +6,7 @@
     justify-content: center;
 }
 
-#grid table{
+.grid table{
     height: 100%;
     max-width: 100%;
     border-spacing: 0;
