@@ -16,14 +16,9 @@ function GridWrapper() {
     function getSize(): {cols: number, rows: number} {
         if (!wrapper || !wrapper.current) return {cols: 0, rows: 0}
 
-        // grab parent element from ref
-        const parent = wrapper.current.parentElement;
-
-        if (!parent) return {cols: 0, rows: 0}
-    
-        // arbitrarily make rows and cols cover 80% of parent element
-        const cols = Math.floor(parent.clientWidth * .8 / blockSize); 
-        const rows = Math.floor(parent.clientHeight * .8 / blockSize);
+        // arbitrarily make rows and cols cover 80% of wrapper element
+        const cols = Math.floor(wrapper.current.clientWidth * .8 / blockSize); 
+        const rows = Math.floor(wrapper.current.clientHeight * .8 / blockSize);
     
         return { rows, cols };
     }

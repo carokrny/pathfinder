@@ -21,21 +21,23 @@ function Grid({ rows, cols }: GridProps) {
 
   // return jsx with grid
   return (
-    <table className="grid"> 
-      <tbody>
-      {data.map((currentRow, r) => {
-        return (
-          <tr id={`row${r}`} key={`row${r}`}>
-            {currentRow.map((item, c) => {
-              return (
-                <td className="block empty" id={`${r}-${c}`} key={`${r}-${c}`}>{/*`${r}-${c}`*/}</td>
-              )
-          })}
-          </tr>
-        )
-      })}
-      </tbody>
-    </table>
+    <div className="grid">
+      <table> 
+        <tbody>
+        {data.map((currentRow, r) => {
+          return (
+            <tr id={`row${r}`} key={`row${r}`}>
+              {currentRow.map((item, c) => {
+                return (
+                  <td className="block empty" id={`${r}-${c}`} key={`${r}-${c}`}>{/*`${r}-${c}`*/}</td>
+                )
+            })}
+            </tr>
+          )
+        })}
+        </tbody>
+      </table>
+    </div>
   );
 }
 
