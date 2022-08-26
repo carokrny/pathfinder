@@ -1,6 +1,6 @@
 import React from 'react';
 import Dropdown from '../Dropdown/Dropdown';
-import './Nav.module.css';
+import styles from './Nav.module.css';
 
 function Nav() {
 
@@ -8,7 +8,7 @@ function Nav() {
   
     // return jsx with nav bar
     return (
-      <nav>
+      <nav style={styles}>
         <h1>Pathfinder</h1>
         <Dropdown name="Algorithms" options={algos} />
       </nav>

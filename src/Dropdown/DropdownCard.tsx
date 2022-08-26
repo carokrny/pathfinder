@@ -1,5 +1,5 @@
 import React from 'react';
-import './Dropdown.module.css';
+import styles from './DropdownCard.module.css';
 
 // define prop types 
 type DropdownCardProps = {
@@ -8,7 +8,7 @@ type DropdownCardProps = {
 
 function DropdownCard({ options }: DropdownCardProps) {
     return (
-        <ul id={`dropdown-${options[0]}`}>
+        <ul id={`dropdown-${options[0]}`} style={styles}>
             {options.map((name, i) => {
                 return(
                     <li key={i}>

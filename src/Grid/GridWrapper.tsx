@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Grid from './Grid';
-import './Grid.module.css';
+import styles from './GridWrapper.module.css';
 
 // arbitrary size of each block in grid
 const blockSize = 25;
@@ -44,7 +44,7 @@ function GridWrapper() {
 
     // return jsx with grid
     return (
-        <div className="grid-wrapper" ref={wrapper}>
+        <div className={styles.wrapper} ref={wrapper} style={styles}>
             <Grid rows={size.rows} cols={size.cols} />
         </div>
     );

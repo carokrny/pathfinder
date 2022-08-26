@@ -1,5 +1,5 @@
 import React from 'react';
-import './Button.module.css'
+import styles from './Button.module.css'
 
 // define prop types 
 type ButtonProps = {
@@ -13,7 +13,7 @@ function Button ({ name, onClick }: ButtonProps) {
             onClick={onClick} 
             type="button" 
             name={name}
-            className="button"
+            className={styles.button}
         >
             {name}
         </button>

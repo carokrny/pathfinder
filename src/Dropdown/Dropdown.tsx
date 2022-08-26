@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Button from '../Button/Button';
 import DropdownCard from './DropdownCard';
-import './Dropdown.module.css';
+import styles from './Dropdown.module.css';
 
 // define prop types 
 type DropdownProps = {
@@ -42,7 +42,7 @@ function Dropdown({ name, options }: DropdownProps) {
 
     return (
         <div 
-            className="dropdown" 
+            className={styles.dropdown} 
             id={id}
         > 
             <Button 

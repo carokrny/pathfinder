@@ -2,16 +2,4 @@
     color: black;
 }
 
-.dropdown ul {
-    position: absolute;
-    z-index: 10;
-    margin: 1rem 0rem;
-    background-color: white;
-    
-}
-
-.dropdown li {
-    list-style: none;
-    padding: 0.5rem;
-}
 

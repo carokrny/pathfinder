@@ -1,5 +1,5 @@
 import React from 'react';
-import './Grid.module.css';
+import styles from './Grid.module.css';
 
 type GridProps = {
   rows: number;
@@ -21,7 +21,7 @@ function Grid({ rows, cols }: GridProps) {
 
   // return jsx with grid
   return (
-    <div className="grid">
+    <div className={styles.grid}>
       <table> 
         <tbody>
         {data.map((currentRow, r) => {
@@ -29,7 +29,11 @@ function Grid({ rows, cols }: GridProps) {
             <tr id={`row${r}`} key={`row${r}`}>
               {currentRow.map((item, c) => {
                 return (
-                  <td className="block empty" id={`${r}-${c}`} key={`${r}-${c}`}>{/*`${r}-${c}`*/}</td>
+                  <td 
+                    className={`${styles.block} ${styles.empty}`} 
+                    id={`${r}-${c}`} 
+                    key={`${r}-${c}`}>
+                  </td>
                 )
             })}
             </tr>

@@ -2,11 +2,11 @@ import React from 'react';
 import GridWrapper from '../Grid/GridWrapper';
 import Nav from '../Nav/Nav';
 import Legend from '../Legend/Legend';
-import './App.module.css';
+import styles from './App.module.css';
 
 function App() {
   return (
-    <div className="App" id="app">
+    <div className={styles.app}>
       <Nav/>
       <Legend/>
       <GridWrapper/>
