@@ -1,6 +1,6 @@
 import React from 'react';
-import Dropdown from '../Dropdown';
-import './Nav.css';
+import Dropdown from '../Dropdown/Dropdown';
+import './Nav.module.css';
 
 function Nav() {
 

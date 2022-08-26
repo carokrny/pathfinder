@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Grid from './Grid';
-import './Grid.css';
+import './Grid.module.css';
 
 // arbitrary size of each block in grid
 const blockSize = 25;

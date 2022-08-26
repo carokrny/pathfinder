@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Button from '../Button';
+import Button from '../Button/Button';
 import DropdownCard from './DropdownCard';
-import './Dropdown.css';
+import './Dropdown.module.css';
 
 // define prop types 
 type DropdownProps = {

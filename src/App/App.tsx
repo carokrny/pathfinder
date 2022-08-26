@@ -1,8 +1,8 @@
 import React from 'react';
 import GridWrapper from '../Grid/GridWrapper';
-import Nav from '../Nav';
-import Legend from '../Legend';
-import './App.css';
+import Nav from '../Nav/Nav';
+import Legend from '../Legend/Legend';
+import './App.module.css';
 
 function App() {
   return (

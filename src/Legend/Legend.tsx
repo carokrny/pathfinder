@@ -1,5 +1,5 @@
 import React from 'react';
-import './Legend.css';
+import './Legend.module.css';
 
 function Legend() {
 

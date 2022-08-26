@@ -1,5 +1,5 @@
 import React from 'react';
-import './Dropdown.css';
+import './Dropdown.module.css';
 
 // define prop types 
 type DropdownCardProps = {

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Grid.css';
+import './Grid.module.css';
 
 type GridProps = {
   rows: number;
